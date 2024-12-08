@@ -34,7 +34,8 @@
                         <div class="bottom_row">
 
                             <div class="message_body text-truncate">
-                                {{ $conversation->messages->last()->body }}
+                                {{ $conversation->messages->last()?->body ?? 'Không có tin nhắn' }}
+
                             </div>
                  
                             @php
